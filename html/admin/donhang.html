@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1acf2d22a5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/admin/style_donhang.css">
+    <title>Đơn hàng</title>
+</head>
+<body>
+    <head>
+        <header>
+            <nav>
+                <ul class="navbar-list">
+                    <!--link hompage-->
+                    <li class="left">
+                        <a href="trangchu.html">
+                        <img src="../../img/logo.png">
+                        </a>
+                    </li>
+                    <div class="right">
+                        <li>
+                            <input type="text" placeholder="Tên sản phẩm..."> 
+                            <a href="trangchu.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-user"></i> Admin
+                        </li>
+                    </div>
+                </ul>
+        </nav>
+        </header>
+    </head>
+<main>
+    <aside id="mySidebar">
+        <ul>            
+            <li><a href="trangchu.html">Sản phẩm</a></li>
+            <li><a class="active">Đơn hàng</a></li>
+            <li><a href="nguoidung.html">Người dùng</a></li>
+            <li><a href="thongke.html">Thống kê</a></li>
+            <li><a onclick="w3_close()">Đóng &times;</a></li>
+        </ul>
+    </aside>
+    <section id="main">
+        <button id="openNav" class="menu-button" onclick="w3_open()">&#9776; Menu</button>
+        <h1>Đơn Hàng</h1>
+        <!--product list-->
+        <div class="filter">
+            <div class="date">
+                <label for="start">Từ ngày: </label>
+                    <input type="date" id="start" name="start" value="2023-11-24" min="2018-01-01" max="2023-12-31">
+                    <label for="start">đến </label>
+                    <input type="date" id="end" name="end" value="2023-11-30" min="2018-01-01" max="2023-12-31">
+            </div>
+            <a href="donhang.html" class="show"></i>Xem</a>
+        </div>
+        <table>
+            <!--noi dung tieu de-->
+            <tr class="title">
+                <th>Mã đơn hàng</th>
+                <th>Khách hàng</th>
+                <th>Địa chỉ</th>
+                <th>Thành tiền</th>
+                <th>Trạng thái</th>
+            </tr>
+            <!--noi dung cac san pham-->
+            <tr class="product">
+                <td><a href="chi_tiet_don_hang.html">#1</a></td>
+                <td>Nguyễn Văn A</td>
+                <td>273 An Dương Vương, p4, q5, TP HCM</td>
+                <td>11.490.000đ</td>
+                <td class="state">Đã nhận</td>
+            </tr>
+            <tr class="product">
+                <td><a href="chi_tiet_don_hang.html">#2</a></td>
+                <td>Trần Văn B</td>
+                <td>273 An Dương Vương, p4, q5, TP HCM</td>
+                <td>34.990.000đ</td>
+                <td class="state">Đã nhận</td>
+            </tr>
+            <tr class="product">
+                <td><a href="chi_tiet_don_hang.html">#3</a></td>
+                <td>Nguyễn Thị C</td>
+                <td>273 An Dương Vương, p4, q5, TP HCM</td>
+                <td>11.490.000đ</td>
+                <td class="state">Đã nhận</td>
+            </tr>
+        </table>
+        <div class="pagination">
+            <a href="donhang.html">&lt;</a>
+            <a href="donhang.html" class="active">1</a>
+            <a href="donhang2.html">2</a>
+            <a href="donhang2.html">&gt;</a>
+        </div>
+    </section>
+</main>
+<script>
+    // js cua phan aside menu
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "15%";
+            document.getElementById("mySidebar").style.width = "15%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+            }
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+
+</script>
+</body>
+</html>

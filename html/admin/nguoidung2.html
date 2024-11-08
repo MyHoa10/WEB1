@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://kit.fontawesome.com/1acf2d22a5.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="../../css/admin/style_nguoidung.css"> <!-- css style - co the sua lai -->
+		<title>Người dùng</title>
+	</head>
+    <body>
+        <header>
+            <nav>
+                <ul class="navbar-list">
+                    <!--link hompage-->
+                    <li class="left">
+                        <a href="trangchu.html">
+                        <img src="../../img/logo.png">
+                        </a>
+                    </li>
+                    <div class="right">
+                        <li>
+                            <input type="text" placeholder="Tên sản phẩm..."> 
+                            <a href="trangchu.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-circle-user"></i> Admin
+                        </li>
+                    </div>
+                </ul>
+        </nav>
+        </header> 
+        <main>
+            <aside id="mySidebar">
+				<ul>					
+					<li><a href="trangchu.html">Sản phẩm</a></li>
+					<li><a href="donhang.html">Đơn hàng</a></li>
+					<li><a class="active">Người dùng</a></li>
+					<li><a href="thongke.html">Thống kê</a></li>
+                    <li><a onclick="w3_close()">Đóng &times;</a></li>
+				</ul>
+			</aside>
+            <section id="main">
+                <button id="openNav" class="menu-button" onclick="w3_open()">&#9776; Menu</button>
+                <h1>Người Dùng</h1>
+                <!--create button-->
+                <!-- mình dùng lại code của trang sửa thông tin sản phẩm -->
+                <a href="addUser.html" class="create-button"><i class="fas fa-plus"></i> Thêm</a>
+                <!-- user's information list-->
+                <table>
+                    <!--noi dung tieu de-->
+                    <tr class="title">
+                        <th>Mã</th>
+                        <th>Avatar</th>
+                        <th>Người dùng</th>
+                        <th>Email</th>
+                        <th>Loại người dùng</th>
+                        <th>Chức năng</th> <!-- Actions gồm thêm, sửa, khóa (không cho người dùng đăng nhập)-->
+                        <th>Khóa người dùng</th>
+                    </tr>
+                    <!--thong tin users -->
+                    <tr class="user">
+                        <td>#1</td>
+                        <td><a href="chi_tiet_nguoi_dung.html"><img src="../../img/avata1.png" alt="per1"></a>
+                        <td>Nguyễn Văn A</td>
+                        <td>vana@gmail.com</td>
+                        <td>Admin</td>
+                        <td>
+                            <a href="sua_nguoi_dung.html" class="action-button">
+                                <i class="fas fa-edit"></i>
+                                <div class="action-tooltip">Chỉnh sửa</div>
+                            </a>
+                            <a class="action-button" onclick="warning(this)">
+                                <i class="fas fa-trash-alt"></i>
+                                <div class="action-tooltip">Xóa</div>
+                            </a>
+                        </td>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                    </tr>
+                    <tr class="user">
+                        <td>#2</td>
+                        <td><a href="chi_tiet_nguoi_dung.html"><img src="../../img/avata2.png" alt="per2"></a></td>
+                        <td>Trần Văn B</td>
+                        <td>vanb@gmail.com</td>
+                        <td>Khách hàng</td>
+                        <td>
+                            <a href="sua_nguoi_dung.html" class="action-button">
+                                <i class="fas fa-edit"></i>
+                                <div class="action-tooltip">Chỉnh sửa</div>
+                            </a>
+                            <a class="action-button" onclick="warning(this)">
+                                <i class="fas fa-trash-alt"></i>
+                                <div class="action-tooltip">Xóa</div>
+                            </a>
+                        </td>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                    </tr>
+                    <tr class="user">
+                        <td>#3</td>
+                        <td><a href="chi_tiet_nguoi_dung.html"><img src="../../img/avata3.png" alt="per3"></a></td>
+                        <td>Nguyễn Thị C</td>
+                        <td>thic@gmail.com</td>
+                        <td>Khách hàng</td>
+                        <td>
+                            <a href="sua_nguoi_dung.html" class="action-button">
+                                <i class="fas fa-edit"></i>
+                                <div class="action-tooltip">Chỉnh sửa</div>
+                            </a>
+                            <a class="action-button" onclick="warning(this)">
+                                <i class="fas fa-trash-alt"></i>
+                                <div class="action-tooltip">Xóa</div>
+                            </a>
+                        </td>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                    </tr>
+                </table>
+                <div class="pagination">
+                    <a href="nguoidung.html">&lt;</a>
+                    <a href="nguoidung.html" >1</a>
+                    <a href="nguoidung2.html" class="active">2</a>
+                    <a href="nguoidung2.html">&gt;</a>
+                </div>
+            </section>
+            <script>
+                function w3_open() {
+                    document.getElementById("main").style.marginLeft = "15%";
+                    document.getElementById("mySidebar").style.width = "15%";
+                    document.getElementById("mySidebar").style.display = "block";
+                    document.getElementById("openNav").style.display = 'none';
+                }
+                function w3_close() {
+                    document.getElementById("main").style.marginLeft = "0%";
+                    document.getElementById("mySidebar").style.display = "none";
+                    document.getElementById("openNav").style.display = "inline-block";
+                }
+
+                //js xoa 
+                function warning(e){
+                    var result = confirm("Bạn chắc chắn muốn xóa người dùng này ?")
+                    if(result)
+                        e.closest("tr").remove();
+                }
+            </script>
+        </main>
+    </body>
