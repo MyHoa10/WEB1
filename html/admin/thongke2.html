@@ -163,8 +163,8 @@
             </table>
             <div class="pagination">
                 <a href="thongke.html">&lt;</a>
-                <a href="thongke.html" class="active">1</a>
-                <a href="thongke2.html">2</a>
+                <a href="thongke.html">1</a>
+                <a href="thongke2.html" class="active">2</a>
                 <a href="thongke2.html">&gt;</a>
             </div>
         </section>
@@ -194,14 +194,14 @@
             };
 
             function checkTen() {
-                tenSp.style.visibility = "visible";  // Hiển thị ô tìm kiếm theo tên sản phẩm
-                loaiSp.style.visibility = "hidden"; // Ẩn ô chọn loại sản phẩm
-            }
+    tenSp.style.visibility = "visible";  // Hiển thị ô tìm kiếm theo tên sản phẩm
+    loaiSp.style.visibility = "hidden"; // Ẩn ô chọn loại sản phẩm
+}
 
-            function checkLoai() {
-                tenSp.style.visibility = "hidden";  // Ẩn ô tìm kiếm theo tên sản phẩm
-                loaiSp.style.visibility = "visible"; // Hiển thị ô chọn loại sản phẩm
-            }
+function checkLoai() {
+    tenSp.style.visibility = "hidden";  // Ẩn ô tìm kiếm theo tên sản phẩm
+    loaiSp.style.visibility = "visible"; // Hiển thị ô chọn loại sản phẩm
+}
 
             function move(){
                 if(ten.checked == true && tenSp.value==''){

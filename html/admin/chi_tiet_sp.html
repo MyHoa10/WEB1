@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://kit.fontawesome.com/1acf2d22a5.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="../../css/admin/style_chi_tiet_sp.css"> <!-- css style - co the sua lai -->
-		<title>Chi tiết sản phẩm</title>
+		<title>Sản phẩm</title>
 	</head>
     <body>
         <header>
@@ -18,25 +18,36 @@
 						<img src="../../img/logo.png">
 						</a>
 					</li>
-					<div class="right">
-						<li>
-							<input type="text" placeholder="Tên sản phẩm..."> 
+					<div class="right" style="margin-left: 500px;">
+						<li >
+							<input type="text" placeholder="Tên sản phẩm..."style="border-radius:30px;" > 
 							<a href="trangchu.html"><i class="fa-solid fa-magnifying-glass"></i></a>
 						</li>
-						<li>
-							<a href="chi_tiet_admin.html" style="color: inherit; text-decoration: none;">
-								<i class="fa-solid fa-circle-user" style="color: inherit; transition: color 0.3s;"></i> Admin
-							</a>
-							
-						</li>
-					</div>
+					</div >
+					
+					<li style="margin-left: auto; ">
+						<a href="dangnhap.html" 
+						   style="font-size: 20px; color: inherit; text-decoration: none;margin-top: auto;"
+						   onmouseover="this.style.color='red'" onmouseout="this.style.color=''">
+							Đăng xuất
+						</a>
+					</li>
+	
+					<li>
+						<a href="chi_tiet_admin.html" 
+						   style="color: inherit; text-decoration: none; font-size: 20px;margin-top: auto"
+						   onmouseover="this.style.color='red'" onmouseout="this.style.color=''">
+							<i class="fa-solid fa-circle-user" style="color: inherit; transition: color 0.3s; font-size: 20px;;"></i> Admin
+						</a>
+					</li>
+					
 				</ul>
-		</nav>
+			</nav>
         </header>
         <main>
 			<aside id="mySidebar">
 				<ul>					
-					<li><a href="trangchu.html">Sản phẩm</a></li>
+					<li><a class="active">Sản phẩm</a></li>
 					<li><a href="donhang.html">Đơn hàng</a></li>
 					<li><a href="nguoidung.html">Người dùng</a></li>
 					<li><a href="thongke.html">Thống kê</a></li>
@@ -51,8 +62,12 @@
 							<img src="../../img/iphone.png" alt="laptop" id="product_pic" style="margin-bottom: 10px;">
 						</div>
 						<div class="edit">
-							<label for="product_name">Loại</label>
-							<input type="text" value="iPhone" disabled>
+							<label for="product_loaisanpham">Loại sản phẩm</label>
+							<select id="product_loaisanpham" name="product_loaisanpham" disabled>
+                                <option value="iphone">Iphone</option>
+                                <option value="samsung">Samsung</option>
+                                <option value="oppo">Oppo</option>
+                            </select>
 						</div> 
 						<div class="edit">
 							<label for="product_name">Tên</label>
@@ -132,5 +147,7 @@ Pin 5000 mAh, Sạc 80 W
 
 			//calling a function during form submission
 			form.addEventListener('submit', submitForm);
-			</script>
+			
+
+		</script>
     </body>
