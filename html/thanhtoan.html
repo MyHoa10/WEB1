@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="../css/style_thanhtoan.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar-list">
+                <!--link hompage-->
+                <li>
+                    <a href="trangchu_DN.html">
+                    <img src="../img/logo.png">
+                    </a>
+                </li>
+                <li>
+                    <!--<input type="text" placeholder="Bạn tìm gì..."> 
+                    <i class="fa-solid fa-magnifying-glass"></i>  -->
+                    <input type="text"  placeholder="Bạn tìm gì.."> 
+                    <a href="ket_qua_TK_DN.html" class="srch">
+                        <i class="fa-solid fa-magnifying-glass"></i> 
+                    </a>
+                </li>
+                <li>
+                    <a href="tim_kiem_NC_DN.html">Tìm kiếm nâng cao</a>
+                </li>
+                <li>
+                    <a href="giohang.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Giỏ hàng 
+                    </a>
+                </li>
+                <li>
+                    <a href="ls_donhang_DN.html">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Lịch sử mua hàng
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">Đăng xuất</a>
+                </li>
+                <li>
+                    <span class="user-afterLog"><i class="fa-solid fa-circle-user"></i></span>Nhom10
+                </li>
+            </ul>
+        </nav>
+        <h1>Chọn phương thức thanh toán</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Tóm tắt hóa đơn</h2>
+            <p>Sản phẩm: iPhone 16 Pro Max</p>
+            <p>Số lượng: 1</p>
+            <p>Tổng thanh toán: 34.990.000đ</p>
+        </section>
+        <section>
+            <h2>Phương thức thanh toán</h2>
+            <form action="xac_nhan_thanh_toan.html" method="POST">
+                <label>
+                    <input type="radio" name="payment_method" value="cash" required>
+                    Thanh toán tiền mặt
+                </label><br>
+                <label>
+                    <input type="radio" name="payment_method" value="bank_transfer" required>
+                    Chuyển khoản ngân hàng
+                </label><br>
+                <label>
+                    <input type="radio" name="payment_method" value="card" required>
+                    Thanh toán qua thẻ
+                </label>
+                <div id="card-info" style="display: none;">
+                    <h3>Thông tin thẻ</h3>
+                    <label for="card_number">Số thẻ:</label>
+                    <input type="text" id="card_number" name="card_number" required><br>
+                    <label for="card_name">Tên trên thẻ:</label>
+                    <input type="text" id="card_name" name="card_name" required><br>
+                    <label for="expiry_date">Ngày hết hạn:</label>
+                    <input type="month" id="expiry_date" name="expiry_date" required><br>
+                    <label for="cvv">CVV:</label>
+                    <input type="password" id="cvv" name="cvv" required><br>
+                </div>
+                <button type="submit">Xác nhận thanh toán</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        const cardRadio = document.querySelector('input[value="card"]');
+        const cardInfo = document.getElementById('card-info');
+        cardRadio.addEventListener('change', () => {
+            cardInfo.style.display = 'block';
+        });
+        const otherRadios = document.querySelectorAll('input[value="cash"], input[value="bank_transfer"]');
+        otherRadios.forEach(radio => radio.addEventListener('change', () => {
+            cardInfo.style.display = 'none';
+        }));
+    </script>
+</body>
+</html>
