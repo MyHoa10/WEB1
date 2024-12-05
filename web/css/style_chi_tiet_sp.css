@@ -141,73 +141,91 @@ nav ul li:nth-child(6) a{
 /*main*/
 section {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between; /* Đưa hai phần sang hai bên */
 	width: 80%;
 	margin: 50px auto;
 }
 
 .characteristics {
 	margin-right: 20px;
+	width: 40%; /* Đặt chiều rộng nhỏ hơn để nhường chỗ cho phần mô tả */
 } 
 
 .characteristics img {
 	display: block;
 	margin: auto;
-    width: 50%;
+    width: 100%; /* Chiếm toàn bộ vùng chứa */
 }
+/* 
+.text-content_characteristics {
+	width: auto; /* Chiều rộng lớn hơn để phần mô tả rộng hơn 
+	font-size: 22px;  Tăng kích thước chữ 
+} */
+
+.text-content_characteristics {	
+    position: absolute; /* Đưa phần tử ra khỏi luồng chính để căn chỉnh chính xác */
+	top: 300px; /* Điều chỉnh khoảng cách từ phía trên */
+    right: 350px; /* Canh sát mép phải màn hình */
+    width: auto; /* Để phần tử tự điều chỉnh chiều rộng */
+    font-size: 18px; /* Kích thước chữ lớn hơn (nếu cần) */
+    margin: 20px; /* Tạo khoảng cách từ mép phải */
+    text-align: left; /* Canh phải nội dung văn bản */
+	
+}
+
+
 
 .text-content_characteristics li {
-	margin-bottom: 10px;
+	margin-bottom: 15px; /* Tăng khoảng cách giữa các dòng */
 }
 
-.text-content_characteristics h2{
+.text-content_characteristics h2 {
 	font-weight: bold;
 	margin: 50px 0 20px 0;
+	font-size: 30px; /* Tăng kích thước chữ cho tiêu đề */
 }
 
-.text-content_characteristics span{
+.text-content_characteristics span {
 	color: red;
+	font-size: 18px; /* Đồng bộ với kích thước nội dung */
 }
 
 /* price */
-.price{
+.price {
 	width: 50%;
 }
-h1{
-	font-size: 25px;
-	margin-bottom: 5px;
-}
-
-.price div{
+h1 {
+	font-size: 28px; /* Tăng kích thước tiêu đề giá */
 	margin-bottom: 10px;
 }
 
-.star-icon {
-	color: #FA6D2B;
-	font-size: 13px;
-	padding-left: 0;	
+.price div {
+	margin-bottom: 10px;
 }
 
-hr{
+
+
+hr {
 	border-color: #EDEDED;
 }
 
-.price{
+.price {
 	font-size: 23px;
 	font-weight: 500;
 }
 
-a{
+a {
 	text-decoration: none;
 }
 
-button{
+button {
 	display: block;
-	width: 100%;
-    font-size: 18px;
-    margin: 20px auto ;
-    padding: 20px 15px;
-    background-color: #FFC801;
+	width: 100px 70px;
+    font-size: 16px;
+    margin: 20px 15px ;
+    padding: 20px 40px;
+		
+    background-color: rgb(226, 201, 132);
 	color: #333;
 	border: none;
     font-weight: bold;
@@ -216,25 +234,26 @@ button{
 	transition-duration: 0.4s;
 }
 
-button:hover{
-    box-shadow: 0 5px 4px rgba(0,0,0,0.34);
-    transform: translateY(-3px);
+button:hover {
+	background-color: #79eb7d
+    /* box-shadow: 0 5px 4px rgba(0,0,0,0.34); */
+    /* transform: translateY(-3px); */
 }
 
-.button-box{
+.button-box {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.button-box a{
+.button-box a {
 	width: 100%;
 }
 
 .button-box button {
 	display: block;
 	width: 90%;
-	background-color: white;	
+	background-color: white; 
 	color: #333;
 	border-radius: 4px;
 	border: 1px solid #333;
@@ -256,7 +275,7 @@ button:hover{
 }
 
 /*footer*/
-footer{
+footer {
 	text-align: center;
 	padding: 10px;
 	margin-top: auto;

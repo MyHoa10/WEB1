@@ -1,3 +1,5 @@
+
+/*reset css*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 * {
 	margin: 0;
@@ -21,11 +23,6 @@ body{
 	background-color:#FFD500 ;
 	padding: 15px 0 10px 0;
 	color: black;
-}
-.avatar img{
-	width: 50px;
-    height: 50px;
-    border-radius: 50%;
 }
 
 .navbar-list img{
@@ -181,10 +178,32 @@ nav ul li:nth-child(6) a{
     margin-right: 5px;
     position: relative;
 }
-
 /*main*/
 main{
 	position: relative;
+}
+
+h1{
+	margin-top: 10px;
+}
+
+/*create button*/
+.create-button {
+	display: block;
+	width: 90px;
+	padding: 8px 0;
+	text-align: center;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+	margin: 20px 0 0 90px;
+}
+
+.create-button:hover{
+	background-color: #DCDCDC;
+    color: #333;
 }
 
 /* menu */
@@ -224,7 +243,6 @@ aside a.active{
 	background-color: #DCDCDC;
 }
 
-
 .menu-button {
 	background-color: #fff;
 	text-align: left;
@@ -244,8 +262,104 @@ section {
     padding: 20px 0 20px 40px;
 }
 
-h1{
-    margin-top: 10px;
+table{
+	margin: 10px auto;
+	width: 90%;
+	text-align: center;
+	border-collapse: separate;
+	border-spacing: 20px;
+}
+
+th{
+	font-size: 20px;
+}
+
+.product img{
+	width: 100px;
+	height: 70px;
+}
+
+.product{
+	font-size: 16px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+}
+
+.product td{
+	padding: 10px 0 10px 20px;
+	border-radius: 4px;
+}
+
+/*button*/
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.action-button {
+	color: black;
+    position: relative;
+	display: inline-block;
+    margin-right: 20px; /* Khoảng cách giữa các biểu tượng */
+    cursor: pointer;
+}
+
+.action-tooltip {
+    display: none;
+    position: absolute;
+    top: 100%; /* Hiển thị bảng phía dưới biểu tượng */
+    left: 0;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.action-button:hover{
+	color: red;
+}
+
+.action-button:hover .action-tooltip {
+    display: block; /* Hiển thị bảng khi hover vào biểu tượng */
+}
+
+/*phan trang*/
+.pagination{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.pagination a{
+	text-decoration: none;
+	padding: 10px 13px;
+	margin: 2px;
+	color: black;
+	/*not reset display att for anchor here, anchor will stack on the div block above*/
+	display: inline-block; 
+	border: 2px solid transparent;  
+}
+
+.pagination a.active{
+	background-color: yellow;
+	color: black;
+	border-radius: 4px;
+
+}
+
+.pagination a:hover:not(.active){
+	border-radius: 4px;
+	border: 2px solid #333;
+}
+
+
+
+.product a{
+    display: block;
+    margin: auto;
+    color: blue;
+    text-decoration: underline;
 }
 
 .filter{
@@ -271,98 +385,3 @@ h1{
 .date span{
     margin-right: 20px;
 }
-
-.show{
-    display: block;
-	width: 100px;
-	padding: 6px 7px ;
-    margin-left: 10px;
-	text-align: center;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-.show:hover {
-    background-color: #DCDCDC;
-    color: #333;
-}
-
-table{
-	margin: 10px auto;
-	width: 90%;
-	text-align: center;
-	border-collapse: separate;
-	border-spacing: 20px;
-}
-
-th{
-	font-size: 20px;
-}
-
-.product{
-	font-size: 16px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
-}
-
-.product td{
-	padding: 15px 0 15px 10px;
-	border-radius: 4px;
-}
-
-.state{
-	font-weight: bold;
-}
-
-.product a{
-    display: block;
-    margin: auto;
-    color: blue;
-    text-decoration: underline;
-}
-
-.product a:hover{
-    color: red;
-}
-
-/*phan trang*/
-.pagination{
-	text-align: center;
-	margin-top: 10px;
-	margin-bottom: 20px;
-}
-
-.pagination a{
-	text-decoration: none;
-	padding: 10px 13px;
-	margin: 2px;
-	color: black;
-	/*not reset display att for anchor here, anchor will stack on the div block above*/
-	display: inline-block; 
-	border: 2px solid transparent;  
-}
-
-.pagination a.active{
-	background-color:yellow;
-	color: black;
-	border-radius: 4px;
-
-}
-
-.pagination a:hover:not(.active){
-	border-radius: 4px;
-	border: 2px solid #333;
-}
-
-
-
-
-
-
-
-

@@ -51,7 +51,7 @@
         <aside id="mySidebar">
             <ul>            
                 <li><a href="trangchu.html">Sản phẩm</a></li>
-                <li><a class="active">Đơn hàng</a></li>
+                <li><a class="active" href="donhang.html">Đơn hàng</a></li>
                 <li><a href="nguoidung.html">Người dùng</a></li>
                 <li><a href="thongke.html">Thống kê</a></li>
                 <li><a onclick="w3_close()">Đóng &times;</a></li>
@@ -85,13 +85,13 @@
                     <label for="end">đến </label>
                     <input type="date" id="end" name="end" value="2023-11-30" min="2018-01-01" max="2023-12-31">
                 </div>
-                <a onclick="move()" class="thongKe">Thống kê</a>
+                <a onclick="move()" class="thongKe">Lọc</a>
             </div>
             
             <table>
                 <!--noi dung tieu de-->
                 <tr class="title">
-                    <th>Mã đơn hàng</th>
+                    <!-- <th>Mã đơn hàng</th> -->
                     <th>Khách hàng</th>
                     <th>Địa chỉ</th>
                     <th>Thành tiền</th>
@@ -100,7 +100,7 @@
                 </tr>
                 <!--noi dung cac san pham-->
                 <tr class="product">
-                    <td><a href="chi_tiet_don_hang.html">#1</a></td>
+                    <!-- <td><a href="chi_tiet_don_hang.html">#1</a></td> -->
                     <td>Nguyễn Văn A</td>
                     <td>273 An Dương Vương, p4, q5, TP HCM</td>
                     <td>11.490.000đ</td>
@@ -108,27 +108,29 @@
                     <td >
                         <select id="trangthai" class="state">
                             <option value="daNhan">Đã nhận</option>
-                            <option value="chuaNhan">Chưa nhận</option>
+                            <option value="chuaNhan"selected>Chưa nhận</option>
                             <option value="huy">Hủy</option>
                         </select>
                     </td>
+                    <td><a href="chi_tiet_don_hang.html">view</a></td>
                 </tr>
                 <tr class="product">
-                    <td><a href="chi_tiet_don_hang.html">#2</a></td>
+                
                     <td>Trần Văn B</td>
                     <td>273 An Dương Vương, p4, q5, TP HCM</td>
                     <td>34.990.000đ</td>
                     <td>2024-01-01</td>
                     <td >
                         <select id="trangthai" class="state">
-                            <option value="daNhan" >Đã nhận</option>
+                            <option value="daNhan" selected>Đã nhận</option>
                             <option value="chuaNhan">Chưa nhận</option>
                             <option value="huy">Hủy</option>
                         </select>
                     </td>
+                    <td><a href="chi_tiet_don_hang.html">view</a></td>
                 </tr>
                 <tr class="product">
-                    <td><a href="chi_tiet_don_hang.html">#3</a></td>
+              
                     <td>Nguyễn Thị C</td>
                     <td>273 An Dương Vương, p4, q5, TP HCM</td>
                     <td>11.490.000đ</td>
@@ -140,10 +142,10 @@
                             <option value="huy">Hủy</option>
                         </select>
                     </td>
-                    
+                    <td><a href="chi_tiet_don_hang.html">view</a></td>
                 </tr>
                 <tr class="product">
-                    <td><a href="chi_tiet_don_hang.html">#4</a></td>
+            
                     <td>Dương Thị D</td>
                     <td>273 An Dương Vương, p4, q5, TP HCM</td>
                     <td>22.789.000đ</td>
@@ -152,13 +154,13 @@
                         <select id="trangthai" class="state">
                             <option value="daNhan">Đã nhận</option>
                             <option value="chuaNhan">Chưa nhận</option>
-                            <option value="huy">Hủy</option>
+                            <option value="huy"selected>Hủy</option>
                         </select>
                     </td>
-                    
+                    <td><a href="chi_tiet_don_hang.html">view</a></td>
                 </tr>
                 <tr class="product">
-                    <td><a href="chi_tiet_don_hang.html">#5</a></td>
+                
                     <td>Ngô Văn E</td>
                     <td>273 An Dương Vương, p4, q5, TP HCM</td>
                     <td>9.720.000đ</td>
@@ -170,10 +172,10 @@
                             <option value="huy">Hủy</option>
                         </select>
                     </td>
-                    
+                    <td><a href="chi_tiet_don_hang.html">view</a></td>
                 </tr>
                 <tr class="product">
-                    <td><a href="chi_tiet_don_hang.html">#6</a></td>
+                  
                     <td>Lý Thị H</td>
                     <td>273 An Dương Vương, p4, q5, TP HCM</td>
                     <td>8.888.000đ</td>
@@ -185,7 +187,7 @@
                             <option value="huy">Hủy</option>
                         </select>
                     </td>
-                    
+                    <td><a href="chi_tiet_don_hang.html">view</a></td>
                 </tr>
             </table>
             <div class="pagination">
@@ -231,15 +233,30 @@ function checkTinhTrang() {
 }
 
 // Hàm di chuyển tới liên kết khi bấm nút Thống kê
+// Hàm di chuyển tới liên kết khi bấm nút Thống kê
+// Hàm di chuyển tới liên kết khi bấm nút Thống kê
 function move() {
+    // Kiểm tra xem người dùng có chọn lọc theo thời gian hay không
     if (document.getElementById("thoiGian").checked) {
         // Nếu đang chọn lọc theo thời gian
-        window.location.href = "loctheothoigian.html";
+        window.location.href = "loctheothoigian.html"; // Chuyển hướng đến trang lọc theo thời gian
     } else if (document.getElementById("tinhTrang").checked) {
         // Nếu đang chọn lọc theo tình trạng
-        window.location.href = "loctheotinhtrang1.html";
+        const selectedValue = document.getElementById("loaiTinhTrang").value; // Lấy giá trị từ select "loaiTinhTrang"
+        
+        // Kiểm tra giá trị của select "loaiTinhTrang" và chuyển hướng đến trang tương ứng
+        if (selectedValue === "daNhan") {
+            window.location.href = "loctheotinhtrang1.html"; // Đã nhận
+        } else if (selectedValue === "chuaNhan") {
+            window.location.href = "loctheotinhtrang_chuanhan.html"; // Chưa nhận
+        } else if (selectedValue === "daHuy") {
+            window.location.href = "loctheotinhtrang_huy.html"; // Hủy
+        }
     }
 }
+
+
+
     </script>
     </body>
     </html>
