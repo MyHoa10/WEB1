@@ -216,9 +216,6 @@ a{
     color: red;
 }
 
-a:hover{
-    color: blue;
-}
 
 button{
 	display: block;
@@ -232,7 +229,7 @@ button{
     cursor: pointer;
     border-radius: 3px;
 	color: #333;
-}
+} 
 /*footer*/
 footer{
 	text-align: center;
