@@ -15,39 +15,35 @@
             <ul class="navbar-list">
                 <!--link hompage-->
                 <li>
-                    <a href="trangchu_DN.html">
+                    <a href="index.html">
                     <img src="../img/logo.png">
                     </a>
+                </li>	
+                <li>
+                    <input type="text" placeholder="Bạn tìm gì.."> 
+                    <a href="ket_qua_TK.html"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </li>
                 <li>
-                    <!--<input type="text" placeholder="Bạn tìm gì..."> 
-                    <i class="fa-solid fa-magnifying-glass"></i>  -->
-                    <input type="text"  placeholder="Bạn tìm gì.."> 
-                    <a href="ket_qua_TK_DN.html" class="srch">
-                        <i class="fa-solid fa-magnifying-glass"></i> 
-                    </a>
+                    <a href="tim_kiem_NC.html">Tìm kiếm nâng cao</a>
                 </li>
                 <li>
-                    <a href="tim_kiem_NC_DN.html">Tìm kiếm nâng cao</a>
-                </li>
-                <li>
-                    <a href="giohang.html">
+                    <a onclick="remind()">
                     <i class="fa-solid fa-cart-shopping"></i>
                     Giỏ hàng 
                     </a>
                 </li>
                 <li>
-                    <a href="donmua.html">
+                    <a onclick="remind()">
                     <i class="fa-solid fa-clock-rotate-left"></i>
                     Lịch sử mua hàng
                     </a>
                 </li>
                 <li>
-                    <a href="index.html">Đăng xuất</a>
+                    <a href="dang_nhap.html">
+                    <i class="fa-solid fa-circle-user"></i>Đăng nhập
+                    </a>
                 </li>
-                <li>
-                    <span class="user-afterLog"><i class="fa-solid fa-circle-user"></i></span>Nhom10
-                </li>
+                
             </ul>
         </nav>
     </header>
@@ -67,11 +63,15 @@
                         </select>
                     </div>
                     
-                    <div>
-                        <label for="priceFrom">Giá từ</label>
-                        <input type="number" id="priceFrom">
-                        <label for="priceFrom">đến khoảng</label>
-                        <input type="number" id="priceTo">
+                    <div class="price-range">
+                        <div>
+                            <label for="priceFrom">Giá từ</label>
+                            <input type="number" id="priceFrom" step="100000" min="0"> <!-- Min để không chọn giá âm -->
+                        </div>
+                        <div>
+                            <label for="priceTo">đến khoảng</label>
+                            <input type="number" id="priceTo" step="100000" min="0"> <!-- Min để không chọn giá âm -->
+                        </div>
                     </div>
                 <button>Tìm kiếm</button>
             </form>
@@ -83,5 +83,10 @@
         <p>Email: thegioididong@gmail.com</p>
         <p>Cảm ơn đã ghé thăm trang web của chúng tôi !</p>
     </footer> 
+    <script>
+        function remind(){
+            alert('Bạn chưa đăng nhập !!!');
+        }
+    </script>
 </body>
 </html>

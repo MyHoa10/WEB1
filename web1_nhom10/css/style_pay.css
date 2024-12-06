@@ -20,10 +20,10 @@ body {
 .payment-container {
     position: relative;
     background-color: #fffffe; 
-    padding: 60px;
+    padding: 30px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(27, 27, 27, 0.881);
-    width: 400px;
+    width: 350px;
     box-sizing: border-box;
     text-align: left;
     display: flex;
@@ -35,7 +35,7 @@ body {
   .payment-container h2 {
     font-size: 21px;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
     width: 100%;
   }
@@ -63,7 +63,7 @@ body {
     align-items: center;
     margin-bottom: 0px;
     padding-left: 0px;
-    width: 100%;
+    width: 90%;
   }
   
 
