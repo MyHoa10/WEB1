@@ -23,7 +23,7 @@
                     <div class="right" style="margin-left: 500px;">
                         <li >
                             <input type="text" placeholder="Tên sản phẩm..."style="border-radius:30px;" > 
-                            <a href="trangchu.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="ketquatimkiem.html"><i class="fa-solid fa-magnifying-glass"></i></a>
                         </li>
                     </div >
                     
@@ -242,18 +242,10 @@ function move() {
         window.location.href = "loctheothoigian.html"; // Chuyển hướng đến trang lọc theo thời gian
     } else if (document.getElementById("tinhTrang").checked) {
         // Nếu đang chọn lọc theo tình trạng
-        const selectedValue = document.getElementById("loaiTinhTrang").value; // Lấy giá trị từ select "loaiTinhTrang"
-        
-        // Kiểm tra giá trị của select "loaiTinhTrang" và chuyển hướng đến trang tương ứng
-        if (selectedValue === "daNhan") {
-            window.location.href = "loctheotinhtrang1.html"; // Đã nhận
-        } else if (selectedValue === "chuaNhan") {
-            window.location.href = "loctheotinhtrang_chuanhan.html"; // Chưa nhận
-        } else if (selectedValue === "daHuy") {
-            window.location.href = "loctheotinhtrang_huy.html"; // Hủy
-        }
+        window.location.href = "loctheotinhtrang1.html"; // Chuyển hướng đến trang lọc theo tình trạng
     }
 }
+
 
 
 

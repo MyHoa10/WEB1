@@ -23,7 +23,7 @@
                     <div class="right" style="margin-left: 500px;">
                         <li >
                             <input type="text" placeholder="Tên sản phẩm..."style="border-radius:30px;" > 
-                            <a href="trangchu.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="ketquatimkiem.html"><i class="fa-solid fa-magnifying-glass"></i></a>
                         </li>
                     </div >
                     
@@ -233,12 +233,13 @@ function checkTinhTrang() {
 
 // Hàm di chuyển tới liên kết khi bấm nút Thống kê
 function move() {
+    // Kiểm tra xem người dùng có chọn lọc theo thời gian hay không
     if (document.getElementById("thoiGian").checked) {
         // Nếu đang chọn lọc theo thời gian
-        window.location.href = "loctheothoigian.html";
+        window.location.href = "loctheothoigian.html"; // Chuyển hướng đến trang lọc theo thời gian
     } else if (document.getElementById("tinhTrang").checked) {
         // Nếu đang chọn lọc theo tình trạng
-        window.location.href = "loctheotinhtrang1.html";
+        window.location.href = "loctheotinhtrang1.html"; // Chuyển hướng đến trang lọc theo tình trạng
     }
 }    
     </script>
